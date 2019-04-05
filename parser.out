@@ -1,0 +1,89 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    ELSE
+    VAR
+    DO
+    THEN
+    END
+    UPDATE
+    BEGIN
+    COMMA
+    IF
+    SEMMICOLOM
+    PLUS
+    PROCEDURE
+    DOT
+    OUT
+    ODD
+    CALL
+    IN
+    WHILE
+
+Grammar
+
+Rule 0     S' -> declaracion
+Rule 1     declaracion -> ID ASSIGN expresion
+Rule 2     declaracion -> expresion
+Rule 3     expresion -> expresion PLUSS expresion
+Rule 4     expresion -> expresion MINUS expresion
+Rule 5     expresion -> expresion TIME expresion
+Rule 6     expresion -> expresion DIVIDE expresion
+Rule 7     expresion -> LPARENT expresion RPARENT
+Rule 8     expresion -> expresion LT expresion
+Rule 9     expresion -> expresion GT expresion
+Rule 10    expresion -> expresion LTE expresion
+Rule 11    expresion -> expresion GTE expresion
+Rule 12    expresion -> expresion ASSIGN expresion
+Rule 13    expresion -> expresion NE expresion
+Rule 14    expresion -> LPARENT expresion RPARENT LT LPARENT expresion RPARENT
+Rule 15    expresion -> LPARENT expresion RPARENT GT LPARENT expresion RPARENT
+Rule 16    expresion -> LPARENT expresion RPARENT LTE LPARENT expresion RPARENT
+Rule 17    expresion -> LPARENT expresion RPARENT GTE LPARENT expresion RPARENT
+Rule 18    expresion -> LPARENT expresion RPARENT ASSIGN LPARENT expresion RPARENT
+Rule 19    expresion -> LPARENT expresion RPARENT NE LPARENT expresion RPARENT
+Rule 20    expresion -> NUMBER
+Rule 21    expresion -> ID
+
+Terminals, with rules where they appear
+
+ASSIGN               : 1 12 18
+BEGIN                : 
+CALL                 : 
+COMMA                : 
+DIVIDE               : 6
+DO                   : 
+DOT                  : 
+ELSE                 : 
+END                  : 
+GT                   : 9 15
+GTE                  : 11 17
+ID                   : 1 21
+IF                   : 
+IN                   : 
+LPARENT              : 7 14 14 15 15 16 16 17 17 18 18 19 19
+LT                   : 8 14
+LTE                  : 10 16
+MINUS                : 4
+NE                   : 13 19
+NUMBER               : 20
+ODD                  : 
+OUT                  : 
+PLUS                 : 
+PROCEDURE            : 
+RPARENT              : 7 14 14 15 15 16 16 17 17 18 18 19 19
+SEMMICOLOM           : 
+THEN                 : 
+TIME                 : 5
+UPDATE               : 
+VAR                  : 
+WHILE                : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+PLUSS                : 3
+declaracion          : 0
+expresion            : 1 2 3 3 4 4 5 5 6 6 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19
+
